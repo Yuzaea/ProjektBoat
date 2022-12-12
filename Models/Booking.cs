@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
-namespace WebAppPrototype.Models
+namespace ProjektBoat.Models
 {
     public class Booking
     {

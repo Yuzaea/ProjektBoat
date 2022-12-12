@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using WebAppPrototype.Interfaces;
-using WebAppPrototype.Models;
-using WebAppPrototype.Services;
+using ProjektBoat.Interfaces;
+using ProjektBoat.Models;
+using ProjektBoat.Services;
 
-namespace WebAppPrototype.Pages.Bookings {
+namespace ProjektBoat.Pages.Bookings {
     public class CreateBookingModel : PageModel {
         private IBookingRepository _bookingRepo;
         private LogInRepository _loggedInUser;

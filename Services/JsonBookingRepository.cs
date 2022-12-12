@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
-using WebAppPrototype.Helpers;
-using WebAppPrototype.Interfaces;
-using WebAppPrototype.Models;
+using ProjektBoat.Helpers;
+using ProjektBoat.Interfaces;
+using ProjektBoat.Models;
 
 namespace WebAppPrototype.Services {
     public class JsonBookingRepository : IBookingRepository {
-        string jsonFileName = @"JsonData\JsonBookings.json";
+        string jsonFileName = @"Data\JsonBookings.json";
         public void AddBooking(Booking bk) {
             List<Booking> @bookings = GetAllBookings().ToList();
             List<int> bookingIds = new List<int>();

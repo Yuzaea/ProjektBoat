@@ -1,6 +1,6 @@
-﻿using WebAppPrototype.Models;
+﻿using ProjektBoat.Models;
 
-namespace WebAppPrototype.Interfaces {
+namespace ProjektBoat.Interfaces {
     public interface IBookingRepository {
         List<Booking> GetAllBookings();
         Booking GetBooking(int bookingId);

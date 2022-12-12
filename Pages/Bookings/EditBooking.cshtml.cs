@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using WebAppPrototype.Interfaces;
-using WebAppPrototype.Models;
+using ProjektBoat.Interfaces;
+using ProjektBoat.Models;
 
-namespace WebAppPrototype.Pages.Bookings {
+namespace ProjektBoat.Pages.Bookings {
     public class EditBookingModel : PageModel {
         private IBookingRepository _repo;
 
