@@ -27,7 +27,7 @@ namespace ProjektBoat.Pages.Members {
         {
             foreach (var member in memberRepo.GetAllMembers())
             {
-                if (Member.Email == Member.Email || member.Password == Member.Password)
+                if (member.Email == Member.Email || member.Password == Member.Password)
                 {
                     logInRepo.MemberLogIn(member);
                     return RedirectToPage("/Index");
