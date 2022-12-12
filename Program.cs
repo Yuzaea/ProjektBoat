@@ -3,8 +3,6 @@ using ProjektBoat.Models;
 
 using ProjektBoat.Interfaces;
 using ProjektBoat.Services;
-using WebAppPrototype.Interfaces;
-using WebAppPrototype.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton < IEventRepository, EventRepository>();
 builder.Services.AddTransient<IBookingRepository, JsonBookingRepository>();
-
+builder.Services.AddSingleton<LogInRepository>();
 builder.Services.AddTransient<IBlog,JsonBlogRepository>();
 
 var app = builder.Build();

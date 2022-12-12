@@ -7,7 +7,7 @@ namespace ProjektBoat.Models
     public class Booking
     {
         [Required]
-        [Range(typeof(int), "0", "50", ErrorMessage = "Id er uden for intervallet")]
+        [Range(typeof(int), "0", "50", ErrorMessage = "Id is outside the interval")]
         public int BookingId { get; set; }
 
         [Display(Name = "Booking Name")]
@@ -23,7 +23,7 @@ namespace ProjektBoat.Models
         //ErrorMessage = "Value for {0} must be between {1} and {2}")]
         public DateTime DateTime { get; set; }
 
-        //Might not the right var type yet
+        //Needs to be changed
         public DateTime TimeFrame { get; set; }
 
 

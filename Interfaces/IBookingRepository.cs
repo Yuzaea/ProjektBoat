@@ -8,6 +8,6 @@ namespace ProjektBoat.Interfaces {
         void UpdateBooking(Booking bk);
         void DeleteBooking(int bookingId);
         List<Booking> FilterBookings(string filter);
-        List<Booking> GetAllBookingsByUser(string user);
+        List<Booking> GetAllBookingsByMember(string member);
     }
 }

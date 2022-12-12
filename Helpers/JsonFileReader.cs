@@ -1,6 +1,5 @@
 ﻿using ProjektBoat.Models;
 using System.Text.Json;
-using WebAppPrototype.Models;
 
 namespace ProjektBoat.Helpers
 {

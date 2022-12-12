@@ -1,16 +1,16 @@
 ﻿using ProjektBoat.Models;
 namespace ProjektBoat.Services {
     public class LogInRepository {
-        private User _UserLogIn;
+        private Member _memberLogIn;
 
-        public void UserLogIn(User user) {
-            _UserLogIn = user;
+        public void MemberLogIn(Member member) {
+            _memberLogIn = member;
         }
-        public void UserLogOut() {
-            _UserLogIn = null;
+        public void MemberLogOut() {
+            _memberLogIn = null;
         }
-        public User GetLoggedUser() { 
-            return _UserLogIn; 
+        public Member GetLoggedMember() { 
+            return _memberLogIn; 
         }
     }
 }

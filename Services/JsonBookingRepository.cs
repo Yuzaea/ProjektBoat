@@ -3,7 +3,7 @@ using ProjektBoat.Helpers;
 using ProjektBoat.Interfaces;
 using ProjektBoat.Models;
 
-namespace WebAppPrototype.Services {
+namespace ProjektBoat.Services {
     public class JsonBookingRepository : IBookingRepository {
         string jsonFileName = @"Data\JsonBookings.json";
         public void AddBooking(Booking bk) {
@@ -40,7 +40,7 @@ namespace WebAppPrototype.Services {
             return filterList;
         }
 
-        public List<Booking> GetAllBookingsByUser(string user) {
+        public List<Booking> GetAllBookingsByMember(string member) {
             List<Booking> userBookings = new List<Booking>();
             List<Booking> bookings = GetAllBookings();
             foreach (var bok in bookings) {
@@ -53,7 +53,7 @@ namespace WebAppPrototype.Services {
             return userBookings;
         }
 
-        //admin function to get all users and their booking - Might need to implement in user and boat to get individual classes
+        //admin function to get all users and their booking - Might need to implement in member and boat to get individual classes
         public List<Booking> GetAllBookings() {
             return JsonFileReader.ReadJsonBookings(jsonFileName);
         }

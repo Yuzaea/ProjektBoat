@@ -17,7 +17,7 @@ namespace ProjektBoat.Pages.Bookings {
 
         [BindProperty]
         public Booking Booking { get; set; }
-        public User User { get; set; }
+        public Member Member { get; set; }
         public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser, IBoatRepository boatRepo) {
             _bookingRepo = bookingRepo;
             _loggedInUser = loggedInUser;
@@ -26,7 +26,7 @@ namespace ProjektBoat.Pages.Bookings {
             BoatNames = new SelectList(Boats, "Id", "Name");
         }
         public IActionResult OnGet() {
-            //User = _loggedInUser.GetLoggedUser();
+            //Member = _loggedInMember.GetLoggedMember();
             return Page();
         }
         public IActionResult OnPost() {
