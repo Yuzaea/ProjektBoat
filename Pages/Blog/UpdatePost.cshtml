@@ -1,0 +1,32 @@
+﻿@page
+@model ProjektBoat.Pages.Blog.UpdatePostModel
+@{
+    ViewData["Title"] = "Update Post";
+}
+<h1>Edit event</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input asp-for="@Model.BlogPost.PostId" type="hidden" />
+
+            <div class="form-group">
+                <label asp-for="@Model.BlogPost.Title" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.Title" class="control-label" />
+                <span asp-validation-for="BlogPost.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.BlogPost.Description" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.Description" class="control-label" />
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.BlogPost.DateTime" class="control-label"></label>
+                <input asp-for="@Model.BlogPost.DateTime" class="control-label" />
+                <span asp-validation-for="BlogPost.DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save updated post" class="btn btn-primary" />
+                <a asp-page="Index">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

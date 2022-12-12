@@ -1,0 +1,16 @@
+﻿@page
+@model ProjektBoat.Pages.Blog.BlogEventModel
+@using ProjektBoat.Interfaces;
+@using ProjektBoat.Models;
+@inject IBlog blog
+@{
+    ViewData["Title"] = "Blog Post Event";
+}
+
+<h1>@Model.BlogPost.PostId. @Model.BlogPost.Title</h1>
+<p>
+    <h2>@Model.BlogPost.DateTime</h2>
+    <h3>@Model.BlogPost.Description</h3>
+<p/>
+
+
