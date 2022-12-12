@@ -1,21 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebAppPrototype.Interfaces;
-using WebAppPrototype.Models;
-using WebAppPrototype.Services;
+using ProjektBoat.Interfaces;
+using ProjektBoat.Models;
+using ProjektBoat.Services;
 
-namespace WebAppPrototype.Pages.Users {
+namespace ProjektBoat.Pages.Members {
     public class LoginModel : PageModel {
         private LogInRepository logInRepo;
-        private IUserRepository userRepo;
+        private IMemberRepository memberRepo;
         public string AccessDenied = "";
 
         [BindProperty]
-        public User User { get; set; }
+        public Member Member { get; set; }
 
-        public LoginModel(IUserRepository repo, LogInRepository logIn)
+        public LoginModel(IMemberRepository repo, LogInRepository logIn)
         {
-            userRepo = repo;
+            memberRepo = repo;
             logInRepo = logIn;
         }
 
@@ -25,11 +25,11 @@ namespace WebAppPrototype.Pages.Users {
         }
         public IActionResult OnPost()
         {
-            foreach (var user in userRepo.GetAllUsers())
+            foreach (var member in memberRepo.GetAllMembers())
             {
-                if (user.Email == User.Email || user.Password == User.Password)
+                if (Member.Email == Member.Email || member.Password == Member.Password)
                 {
-                    logInRepo.UserLogIn(user);
+                    logInRepo.MemberLogIn(member);
                     return RedirectToPage("/Index");
                 }
                 AccessDenied = "Email or Password are wrong";
