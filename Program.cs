@@ -1,6 +1,5 @@
 using ProjektBoat.Interfaces;
 using ProjektBoat.Models;
-
 using ProjektBoat.Interfaces;
 using ProjektBoat.Services;
 
