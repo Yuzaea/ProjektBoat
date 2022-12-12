@@ -1,6 +1,9 @@
 using ProjektBoat.Interfaces;
 using ProjektBoat.Models;
 
+using ProjektBoat.Interfaces;
+using ProjektBoat.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton < IEventRepository, EventRepository>();
 
 
+builder.Services.AddTransient<IBlog,JsonBlogRepository>();
 
 var app = builder.Build();
 

@@ -1,0 +1,43 @@
+﻿@page
+@model ProjektBoat.Pages.Blog.IndexModel
+@using ProjektBoat.Interfaces;
+@using ProjektBoat.Models;
+@inject IBlog blog
+@{
+    ViewData["Title"] = "Blog Site";
+}
+
+<h1>Blog posts</h1>
+
+
+<a asp-page="CreatePost">Create a new Post for the blog</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>   
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach ( BlogPost item in Model.BlogPost)
+        {
+            <tr>
+                <td>@item.PostId</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.DateTime</td>
+                <td>
+                    <a asp-page="UpdatePost" asp-route-id=@item.PostId>Edit</a>|
+                    <a asp-page="DeletePost" asp-route-id=@item.PostId>Delete</a> |
+                    <a asp-page="BlogEvent" asp-route-id=@item.PostId>Details</a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
