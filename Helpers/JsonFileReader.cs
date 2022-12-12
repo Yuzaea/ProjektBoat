@@ -13,10 +13,8 @@ namespace ProjektBoat.Helpers
                 return JsonSerializer.Deserialize<List<BlogPost>>(indata);
             }
         }
-        public static List<Booking> ReadJsonBookings(string jsonFileName)
-        {
-            using (var jsonFileReader = File.OpenText(jsonFileName))
-            {
+        public static List<Booking> ReadJsonBookings(string jsonFileName) {
+            using (var jsonFileReader = File.OpenText(jsonFileName)) {
                 string indata = jsonFileReader.ReadToEnd();
                 return JsonSerializer.Deserialize<List<Booking>>(indata);
             }
