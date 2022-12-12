@@ -1,0 +1,50 @@
+﻿@page
+@model ProjektBoat.Pages.EventPages.CreateEventModel
+@{
+    ViewData["Title"] = "Create Event";
+}
+    <h1>Create Event</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="@Model.Event.EventID" class="control-label"></label>
+                    <input asp-for="@Model.Event.EventID" class="control-label" />
+                    <span asp-validation-for="Event.EventID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Event.Name" class="control-label"></label>
+                    <input asp-for="@Model.Event.Name" class="control-label" />
+                    <span asp-validation-for="Event.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Event.Date" class="control-label"></label>
+                    <input asp-for="@Model.Event.Date" class="control-label" />
+                    <span asp-validation-for="Event.Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Event.ImageURL" class="control-label"></label>
+                    <input asp-for="@Model.Event.ImageURL" class="control-label" />
+                    <span asp-validation-for="Event.ImageURL" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Event.participent" class="control-label"></label>
+                    <input asp-for="@Model.Event.participent" class="control-label" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Event.MaxParticipents" class="control-label"></label>
+                    <input asp-for="@Model.Event.MaxParticipents" class="control-label" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.Event.Description" class="control-label"></label>
+                    <input asp-for="@Model.Event.Description" class="control-label" />
+                    <span asp-validation-for="Event.Description" class="text-danger"></span>
+                </div>
+
+                <input type="submit" value="Create a new Event" class="btn btn-primary" />
+                </>
+        </form>
+    </div>
+</div>
+

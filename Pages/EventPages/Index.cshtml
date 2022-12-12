@@ -1,0 +1,49 @@
+﻿@page
+@using ProjektBoat.Models;
+@model ProjektBoat.Pages.EventPages.IndexModel
+@{
+    ViewData["Title"] = "Show events";
+}
+
+
+
+<h1>
+    List of Boats </>
+
+    <a asp-page="CreateEvent"> Create new Event</a>
+
+
+
+    @foreach (Event item in Model.Events)
+    {
+            <div class="card" style="width: 18rem;">
+
+            <img src="@item.ImageURL" onerror="this.style.display='none'" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">@item.Name</h5>
+        <p class="card-text">@item.Description</p>
+                <h7>@if (DateTime.UtcNow > item.Date)
+                    {
+                        <p>    <font size="5">smol</font>      </p>
+                    }
+                    else
+                    {
+                           <p>  <font size="5">@item.Date  </font>    </p>
+                    }
+                </h7>
+                <form method="post" asp-page-handler="AddParticipent">
+
+                    <a>
+                        @if (item.MaxParticipents != 0)
+                         
+                         {
+                        <b class="btn btn-primary" onclick="AddParticipent">@item.participent/@item.MaxParticipents</b>
+                         }
+                   </a>
+
+                </form>
+           </div>
+
+    </div>
+    }
+</h1>
