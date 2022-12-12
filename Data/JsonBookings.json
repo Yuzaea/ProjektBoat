@@ -1,0 +1,26 @@
+[
+  {
+    "BookingId": 1,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Price": 99.9,
+    "DateTime": "2020-10-25T08:55:00",
+    "TimeFrame": "2020-10-25T08:55:00"
+  },
+  {
+    "BookingId": 2,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Price": 99.99,
+    "DateTime": "2020-10-25T08:55:00",
+    "TimeFrame": "2020-10-25T08:55:00"
+  },
+  {
+    "BookingId": 3,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Price": 99.999,
+    "DateTime": "2020-10-25T08:55:00",
+    "TimeFrame": "2020-10-25T08:55:00"
+  }
+]

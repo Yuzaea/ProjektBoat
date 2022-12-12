@@ -1,0 +1,51 @@
+﻿@page
+@model WebAppPrototype.Pages.Bookings.IndexModel
+@using WebAppPrototype.Models
+@using WebAppPrototype.Interfaces
+@inject IBookingRepository repo
+@{
+    ViewData["Title"] = "Bookings";
+}
+
+<h1>List of Bookings</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<a  asp-page="CreateBooking" >Make a new Booking</a>
+@*Might be repo... or _repo... i think*@
+<p>Number of Bookings @repo.GetAllBookings().Count</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>DateTime</th>
+            <th>TimeFrame</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Booking item in Model.Bookings)
+        {
+                <tr>
+                    <td>@item.BookingId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@item.DateTime</td>
+                    <td>@item.TimeFrame</td>
+                    <td><a asp-page="EditBooking" asp-route-bookingId=@item.BookingId>Edit</a>| 
+                        <a asp-page="DeleteBooking" asp-route-bookingId=@item.BookingId>Delete</a></td>
+                </tr>
+
+
+
+        }
+    </tbody>
+</table>

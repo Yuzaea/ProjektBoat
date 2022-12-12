@@ -1,0 +1,17 @@
+﻿@page
+@model WebAppPrototype.Pages.Bookings.DeleteBookingModel
+@{
+    ViewData["Titel"] = "Delete Booking";
+}
+
+<h1>Delete Booking</h1>
+<p>
+    <h2>Vil du slette denne event?</h2>
+    <h3>ID @Model.Booking.BookingId</h3>
+    <h3>Name @Model.Booking.Name</h3>
+    <form method="post">
+        <input asp-for="@Model.Booking.BookingId"  type="hidden"/>
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+</p>
