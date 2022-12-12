@@ -11,19 +11,19 @@ namespace ProjektBoat.Pages.Bookings {
     public class CreateBookingModel : PageModel {
         private IBookingRepository _bookingRepo;
         private LogInRepository _loggedInUser;
-        private IBoatRepository _boatRepo;
+        //private IBoatRepository _boatRepo;
 
-        public SelectList BoatNames { get; set; }
+        //public SelectList BoatNames { get; set; }
 
         [BindProperty]
         public Booking Booking { get; set; }
         public Member Member { get; set; }
-        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser, IBoatRepository boatRepo) {
+        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser, /*IBoatRepository boatRepo*/) {
             _bookingRepo = bookingRepo;
             _loggedInUser = loggedInUser;
-            _boatRepo = boatRepo;
-            List<Boat> Boats = _boatRepo.GetAllBoats();
-            BoatNames = new SelectList(Boats, "Id", "Name");
+            //_boatRepo = boatRepo;
+            //List<Boat> Boats = _boatRepo.GetAllBoats();
+            //BoatNames = new SelectList(Boats, "Id", "Name");
         }
         public IActionResult OnGet() {
             //Member = _loggedInMember.GetLoggedMember();
