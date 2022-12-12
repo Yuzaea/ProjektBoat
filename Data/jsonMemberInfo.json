@@ -1,0 +1,29 @@
+[
+  {
+    "ID": 1,
+    "Name": "Jan Andersen",
+    "Age": 48,
+    "PhoneNo": "22 44 66 32",
+    "Mail": "ja@mail.com",
+    "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, SRC-certifikat, Vandscooterbevis, Yachtskipperbevis",
+    "Admin": true
+  },
+  {
+    "ID": 2,
+    "Name": "Sandra Jensen",
+    "Age": 30,
+    "PhoneNo": "33 66 54 90",
+    "Mail": "sj@mail.com",
+    "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis",
+    "Admin": false
+  },
+  {
+    "ID": 3,
+    "Name": "Mads Carlsen",
+    "Age": 18,
+    "PhoneNo": "11 65 78 99",
+    "Mail": "mc@mail.com",
+    "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, Vandscooterbevis",
+    "Admin": false
+  }
+]
