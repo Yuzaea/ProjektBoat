@@ -18,7 +18,7 @@ namespace ProjektBoat.Pages.Bookings {
         [BindProperty]
         public Booking Booking { get; set; }
         public Member Member { get; set; }
-        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser, /*IBoatRepository boatRepo*/) {
+        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser /*IBoatRepository boatRepo*/) {
             _bookingRepo = bookingRepo;
             _loggedInUser = loggedInUser;
             //_boatRepo = boatRepo;
