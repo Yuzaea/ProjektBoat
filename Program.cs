@@ -11,6 +11,7 @@ builder.Services.AddSingleton < IEventRepository, EventRepository>();
 builder.Services.AddTransient<IBookingRepository, JsonBookingRepository>();
 builder.Services.AddSingleton<LogInRepository>();
 builder.Services.AddTransient<IBlog,JsonBlogRepository>();
+builder.Services.AddTransient<IMemberRepository, JsonMemberRepository>();
 
 var app = builder.Build();
 
