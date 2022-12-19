@@ -6,7 +6,8 @@
     "PhoneNo": "22 44 66 32",
     "Mail": "ja@mail.com",
     "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, SRC-certifikat, Vandscooterbevis, Yachtskipperbevis",
-    "Admin": true
+    "Admin": true,
+    "Password": "12345"
   },
   {
     "ID": 2,
@@ -15,7 +16,8 @@
     "PhoneNo": "33 66 54 90",
     "Mail": "sj@mail.com",
     "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis",
-    "Admin": false
+    "Admin": false,
+    "Password": "abcde"
   },
   {
     "ID": 3,
@@ -24,6 +26,7 @@
     "PhoneNo": "11 65 78 99",
     "Mail": "mc@mail.com",
     "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, Vandscooterbevis",
-    "Admin": false
+    "Admin": false,
+    "Password": "password" 
   }
 ]
