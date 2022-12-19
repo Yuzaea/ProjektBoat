@@ -1,4 +1,55 @@
 ﻿@page
 @model ProjektBoat.Pages.Members.EditMemberModel
 @{
+    ViewData["Title"] = "Rediger medlem";
 }
+<h1>Rediger medlem</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="@Model.Member.ID" />
+            <div class="form-group">
+                <label asp-for="@Model.Member.Name" class="control-label"></label>
+                <input asp-for="@Model.Member.Name" class="form-control" />
+                <span asp-validation-for="Member.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.Age" class="control-label"></label>
+                <input asp-for="@Model.Member.Age" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.PhoneNo" class="control-label"></label>
+                <input asp-for="@Model.Member.PhoneNo" class="form-control" />
+                <span asp-validation-for="Member.PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.Mail" class="control-label"></label>
+                <input asp-for="@Model.Member.Mail" class="form-control" />
+                <span asp-validation-for="Member.Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.Certificate" class="control-label"></label>
+                <input asp-for="@Model.Member.Certificate" class="form-control" />
+                <span asp-validation-for="Member.Certificate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Member.Admin" class="control-label"></label>
+                <input asp-for="@Model.Member.Admin" class="form-control" />
+                <span asp-validation-for="Member.Admin" class="text-danger"></span>
+            </div>
+            <div class="formgroup">
+                <input type="submit" asp-page-handler="Edit" value="Update" class="btn btn-primary" />
+            </div>
+            <div class="formgroup">
+                <input type="submit" asp-page-handler="Delete" value="Delete" class="btn btn-primary" />
+            </div>
+
+        </form>
+
+    </div>
+    <div>
+        <a asp-page="Index">Back to List</a>
+    </div>
+</div>
+

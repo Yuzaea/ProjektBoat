@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjektBoat.Models
 {
     public class Member
     {
-        public Member(int id, string name, int age, string phoneNo, string mail, string certificate, bool admin)
+        public Member(int id, string name, int age, string phoneNo, string mail, string certificate, bool admin, string password)
         {
                 ID = id;
                 Name = name;
@@ -13,6 +14,7 @@ namespace ProjektBoat.Models
                 Mail = mail;
                 Certificate = certificate;
                 Admin = admin;
+                Password = password;
         }
 
         public Member() //default constructor
@@ -42,5 +44,8 @@ namespace ProjektBoat.Models
         
         [Required(ErrorMessage = "Der mangler at angive om du har admin tilladelse")] 
         public bool Admin { get; set; }
+
+        [Required(ErrorMessage = "Der mangler at angive et password")]
+        public string Password { get; set; }
     }
 }
