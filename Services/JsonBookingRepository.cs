@@ -6,7 +6,7 @@ using ProjektBoat.Models;
 namespace ProjektBoat.Services {
     public class JsonBookingRepository : IBookingRepository
     {
-        string jsonFileName = @"JsonData\JsonBookings.json";
+        string jsonFileName = @"Data\JsonBookings.json";
 
         public void AddBooking(Booking bk)
         {
