@@ -1,4 +1,16 @@
 ﻿@page
 @model ProjektBoat.Pages.Members.DeleteMemberModel
 @{
+    ViewData["Title"] = "Slet medlem";
 }
+<h1>Slet medlem</h1>
+<p>
+    <h2>Vil du slette dette medlem?</h2>
+    <h3>ID @Model.Member.ID</h3>
+    <h3>Name @Model.Member.Name</h3>
+    <form method="post">
+        <input asp-for="@Model.Member.ID" type="hidden" />
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+</p>
