@@ -10,7 +10,7 @@ namespace ProjektBoat.Services {
 
         public void AddBooking(Booking bk)
         {
-            List<Booking> @bookings = GetAllBookings().ToList();
+            List<Booking> @bookings = GetAllBookings();
             List<int> bookingIds = new List<int>();
             foreach (var bok in bookings)
             {
@@ -87,7 +87,7 @@ namespace ProjektBoat.Services {
 
         public void UpdateBooking(Booking bk)
         {
-            List<Booking> bookings = GetAllBookings().ToList();
+            List<Booking> bookings = GetAllBookings();
             if (@bk != null)
             {
                 foreach (Booking b in bookings)
