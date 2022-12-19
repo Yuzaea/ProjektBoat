@@ -50,6 +50,7 @@ namespace ProjektBoat.Services
                     {
                         p.PostId = post.PostId;
                         p.Title = post.Title;
+                        p.ShortDescription = post.ShortDescription;
                         p.Description = post.Description;
                         p.DateTime = post.DateTime;
 
