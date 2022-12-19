@@ -18,7 +18,7 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Description</th>   
+            <th>Short Description</th>   
             <th>DateTime</th>
         </tr>
     </thead>
@@ -29,7 +29,7 @@
             <tr>
                 <td>@item.PostId</td>
                 <td>@item.Title</td>
-                <td>@item.Description</td>
+                <td>@item.ShortDescription</td>
                 <td>@item.DateTime</td>
                 <td>
                     <a asp-page="UpdatePost" asp-route-id=@item.PostId>Edit</a>|
