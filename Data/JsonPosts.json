@@ -1,12 +1,14 @@
 [
   {
     "Title": "L\u00F8rdags tur til  sverige",
+    "BlogImage": "Sejl_2015.jpg",
     "PostId": 1,
     "Description": "Fint vejr vi havde",
     "DateTime": "2023-01-14T12:00:00"
   },
   {
     "Title": "Weekend-trip",
+    "BlogImage": "Stævne.jpg",
     "PostId": 2,
     "Description": "\u002B overnatning",
     "DateTime": "2022-12-17T12:04:00"

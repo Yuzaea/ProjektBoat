@@ -5,6 +5,8 @@ namespace ProjektBoat.Models
 {
     public class BlogPost
     {
+        public string BlogImage { get; set; }
+
         [Required(ErrorMessage = "Title of the post is required"), MaxLength(30)]
         public string Title { get; set; }
         public int PostId { get; set; }
@@ -12,6 +14,9 @@ namespace ProjektBoat.Models
         [Required]
         [Range(typeof(DateTime), "18/11/2022", "18/11/2023", ErrorMessage = "Datoen er uden for intervallet")]
         public DateTime DateTime { get; set; }
+
+        public BlogPost() //empty constructor - has to be like that
+        { }
 
         public override bool Equals(object? obj)
         {
