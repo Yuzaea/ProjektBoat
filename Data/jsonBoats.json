@@ -13,5 +13,15 @@
     "BoatId": 3,
     "BoatName": "Charlie",
     "Pier": 3
+  },
+  {
+    "BoatId": 4,
+    "BoatName": "Delta",
+    "Pier": 4
+  },
+  {
+    "BoatId": 5,
+    "BoatName": "Echo",
+    "Pier": 5
   }
 ]
