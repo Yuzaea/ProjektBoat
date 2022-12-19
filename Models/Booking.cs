@@ -16,27 +16,10 @@ namespace ProjektBoat.Models
 
         public string Description { get; set; }
 
-        //[Required(ErrorMessage = "The date is required")]
-        //[Range(typeof(DateTime), "11/11/2022", "11/11/2023",
-        //ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        public string BoatName { get; set; }
+
         public DateTime DateTime { get; set; }
 
-        //Needs to be changed
         public DateTime TimeFrame { get; set; }
-
-
-        //Might be needed later on
-        //public override bool Equals(object? obj) {
-        //    if (obj == null) {
-        //        return false;
-        //    } else {
-        //        Booking other = obj as Booking;
-        //        if (other.BookingId == BookingId) {
-        //            return true;
-        //        } else {
-        //            return false;
-        //        }
-        //    }
-        //}
     }
 }

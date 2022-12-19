@@ -12,22 +12,21 @@ namespace ProjektBoat.Pages.Bookings {
     {
         private IBookingRepository _bookingRepo;
         private LogInRepository _loggedInMember;
-        //private IBoatRepository _boatRepo;
+        private IBoatRepository _boatRepo;
         private IMemberRepository _memberRepo;
 
 
-        public SelectList BoatNames { get; set; }
+        public SelectList BoatName { get; set; }
 
         [BindProperty]
         public Booking Booking { get; set; }
         public Member Member { get; set; }
-        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInMember/*, IBoatRepository boatRepo*/)
+        public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInMember, IBoatRepository _boatRepo)
         {
             _bookingRepo = bookingRepo;
             _loggedInMember = loggedInMember;
-            //_boatRepo = boatRepo;
-            //List<Boat> Boats = _boatRepo.GetAllBoats();
-            //BoatNames = new SelectList(Boats, "Id", "Name");
+            List<Boat> boats = _boatRepo.GetAllBoats();
+            BoatName = new SelectList(boats, "BoatId", "BoatName");
         }
 
         public IActionResult OnGet()

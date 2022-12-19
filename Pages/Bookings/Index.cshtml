@@ -8,21 +8,13 @@
 }
 
 <h1>List of Bookings</h1>
-
-<form method="post">
-    @*<p>
-    Search: <input type="text" asp-for="@Model.FilterCriteria" />
-    <input type="submit" value="Search" />
-    </p>*@
-</form>
 <a asp-page="CreateBooking">Make a new Booking</a>
 <table class="table">
     <thead>
         <tr>
-            @*<th>Id</th>*@
             <th>Name</th>
             <th>Description</th>
-            <th>Price</th>
+            <th>Boat</th>
             <th>DateTime</th>
             <th>TimeFrame</th>
         </tr>
@@ -32,9 +24,9 @@
         @foreach (Booking item in Model.Bookings)
         {
             <tr>
-                @*<td>@item.BookingId</td>*@
                 <td>@item.Name</td>
                 <td>@item.Description</td>
+                <td>@item.BoatName</td>
                 <td>@item.DateTime</td>
                 <td>@item.TimeFrame</td>
                 <td>

@@ -7,15 +7,13 @@ namespace ProjektBoat.Services
     public class JsonBoatRepository : IBoatRepository {
         string jsonFileName = @"Data\JsonBoats.json";
 
-        private List<Boat> _boats;
-
         public void AddBoat(Boat bo)
         {
             List<Boat> @boats = GetAllBoats();
             List<int> boatIds = new List<int>();
             foreach (var bok in boats)
             {
-                boatIds.Add(bo.BoatId);
+                boatIds.Add(bok.BoatId);
             }
 
             if (boatIds.Count != 0)
@@ -36,11 +34,11 @@ namespace ProjektBoat.Services
             return JsonFileReader.ReadJsonBoats(jsonFileName);
         }
 
-        public Boat GetBoat(int boatId)
+        public Boat GetBoat(string boatName)
         {
             foreach (Boat b in GetAllBoats())
             {
-                if (b.BoatId == boatId)
+                if (b.BoatName == boatName)
                     return b;
             }
             return new Boat();

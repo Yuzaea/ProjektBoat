@@ -7,31 +7,36 @@
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <input asp-for="@Model.Booking.BookingId" type="hidden" />
-
+            @*<input asp-for="@Model.Booking.BookingId" type="hidden" />*@
             <div class="form-group">
                 <label asp-for="@Model.Booking.Name" class="control-label"></label>
-                <input asp-for="@Model.Booking.Name" class="control-label" />
+                <input asp-for="@Model.Booking.Name" class="form-control" />
                 <span asp-validation-for="Booking.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.Description" class="control-label"></label>
-                <input asp-for="@Model.Booking.Description" class="control-label" />
+                <input asp-for="@Model.Booking.Description" class="form-control" />
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.Booking.BoatName" class="control-label"></label>
+                <select asp-for="@Model.Booking.BoatName" class="form-control" asp-items="@Model.BoatName">
+                    <option value="">---Select Boat---</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.DateTime" class="control-label"></label>
-                <input asp-for="@Model.Booking.DateTime" class="control-label" />
+                <input asp-for="@Model.Booking.DateTime" class="form-control" />
                 <span asp-validation-for="Booking.DateTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.TimeFrame" class="control-label"></label>
-                <input asp-for="@Model.Booking.TimeFrame" class="control-label" />
+                <input asp-for="@Model.Booking.TimeFrame" class="form-control" />
                 <span asp-validation-for="Booking.TimeFrame" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save updated Booking" class="btn btn-primary" />
-            </div
-            <div class="form-group">
+            </div>
+            <div class="formgroup">
                 <input type="submit" value="Delete Booking" asp-page-handler="Delete" class="btn btn-primary" />
             </div>
         </form>
