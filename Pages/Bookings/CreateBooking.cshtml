@@ -8,35 +8,25 @@
     <div class="col-md-4">
         <form method="post">
             <div class="form-group">
-                <label asp-for="@Model.Booking.BookingId" class="control-label"></label>
-                <input asp-for="@Model.Booking.BookingId" class="control-label" />
-                <span asp-validation-for="Booking.BookingId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="@Model.Booking.Name" class="control-label"></label>
-                <input asp-for="@Model.Booking.Name" class="control-label" />
+                <input asp-for="@Model.Booking.Name" class="form-control" />
                 <span asp-validation-for="Booking.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.Description" class="control-label"></label>
-                <input asp-for="@Model.Booking.Description" class="control-label" />
-            </div>
-            <div class="form-group">
-                <label asp-for="@Model.Booking.Price" class="control-label"></label>
-                <input asp-for="@Model.Booking.Price" class="control-label" />
-                <span asp-validation-for="Booking.Price" class="text-danger"></span>
+                <input asp-for="@Model.Booking.Description" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.DateTime" class="control-label"></label>
-                <input asp-for="@Model.Booking.DateTime" class="control-label" />
+                <input asp-for="@Model.Booking.DateTime" class="form-control" />
                 <span asp-validation-for="Booking.DateTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="@Model.Booking.TimeFrame" class="control-label"></label>
-                <input asp-for="@Model.Booking.TimeFrame" class="control-label" />
-                <span asp-validation-for="Booking.TimeFrame" class="text-danger"></span>
+                <input asp-for="@Model.Booking.TimeFrame" class="form-control" />
+                <span asp-validation-for="@Model.Booking.TimeFrame" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="formgroup">
                 <input type="submit" value="Create a new event" class="btn btn-primary" />
             </div>
         </form>

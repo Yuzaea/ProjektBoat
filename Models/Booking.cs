@@ -6,17 +6,15 @@ namespace ProjektBoat.Models
 {
     public class Booking
     {
-        [Required]
-        [Range(typeof(int), "0", "50", ErrorMessage = "Id is outside the interval")]
         public int BookingId { get; set; }
+
+        public int UserId { get; set; }
 
         [Display(Name = "Booking Name")]
         [Required(ErrorMessage = "Name of the Booking is required"), MaxLength(80)]
         public string Name { get; set; }
 
         public string Description { get; set; }
-
-        public double Price { get; set; }
 
         //[Required(ErrorMessage = "The date is required")]
         //[Range(typeof(DateTime), "11/11/2022", "11/11/2023",

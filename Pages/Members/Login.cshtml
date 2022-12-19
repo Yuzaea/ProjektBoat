@@ -17,12 +17,13 @@
             <input asp-for="@Model.Member.Password" class="form-control" />
             <span asp-validation-for="@Model.Member.Password" class="text-danger"></span>
         </div>
+        <p></p>
         <div class="form-check-group">
             <input type="submit" value="Login with Email" class="btn-block btn btn-primary" />
         </div>
         <br />
     </form>
     <p>
-        <a asp-page="/Members/CreateMember" class="btn-block btn btn-primary">Registre</a>
+        <a asp-page="/Users/CreateUser" class="btn-block btn btn-primary">Register</a>
     </p>
 </div>

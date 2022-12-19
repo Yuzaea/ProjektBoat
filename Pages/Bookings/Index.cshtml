@@ -10,17 +10,16 @@
 <h1>List of Bookings</h1>
 
 <form method="post">
-    <p>
-        Search: <input type="text" asp-for="@Model.FilterCriteria" />
-        <input type="submit" value="Search" />
-    </p>
+    @*<p>
+    Search: <input type="text" asp-for="@Model.FilterCriteria" />
+    <input type="submit" value="Search" />
+    </p>*@
 </form>
-<a  asp-page="CreateBooking" >Make a new Booking</a>
-<p>Number of Bookings @repo.GetAllBookings().Count</p>
+<a asp-page="CreateBooking">Make a new Booking</a>
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
+            @*<th>Id</th>*@
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
@@ -32,19 +31,17 @@
 
         @foreach (Booking item in Model.Bookings)
         {
-                <tr>
-                    <td>@item.BookingId</td>
-                    <td>@item.Name</td>
-                    <td>@item.Description</td>
-                    <td>@item.Price</td>
-                    <td>@item.DateTime</td>
-                    <td>@item.TimeFrame</td>
-                    <td><a asp-page="EditBooking" asp-route-bookingId=@item.BookingId>Edit</a>| 
-                        <a asp-page="DeleteBooking" asp-route-bookingId=@item.BookingId>Delete</a></td>
-                </tr>
-
-
-
+            <tr>
+                @*<td>@item.BookingId</td>*@
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.DateTime</td>
+                <td>@item.TimeFrame</td>
+                <td>
+                    <a asp-page="EditBooking" asp-route-bookingId=@item.BookingId>Edit</a>|
+                    <a asp-page="DeleteBooking" asp-route-bookingId=@item.BookingId>Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

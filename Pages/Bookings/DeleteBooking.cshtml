@@ -5,13 +5,31 @@
 }
 
 <h1>Delete Booking</h1>
-<p>
-    <h2>Vil du slette denne event?</h2>
-    <h3>ID @Model.Booking.BookingId</h3>
-    <h3>Name @Model.Booking.Name</h3>
-    <form method="post">
-        <input asp-for="@Model.Booking.BookingId"  type="hidden"/>
-        <input type="submit" value="Delete" />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="@Model.Booking.BookingId" />
+            <div class="form-group">
+               <label asp -for="@Model.Booking.Name" class="control-label"></label>
+                <input asp-for="@Model.Booking.Name" class="form-control" />
+                <span asp-validation-for="Booking.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Booking.Description" class="control-label"></label>
+                <input asp-for="@Model.Booking.Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Booking.DateTime" class="control-label"></label>
+                <input asp-for="@Model.Booking.DateTime" class="form-control" />
+                <span asp-validation-for="Booking.DateTime" class="text-danger"></span>
+            </div>
+            <div class="formgroup">
+                <input type="submit" value="Delete" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div>
         <a asp-page="Index">Cancel</a>
-    </form>
-</p>
+    </div>
+</div>

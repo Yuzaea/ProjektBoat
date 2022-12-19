@@ -3,23 +3,33 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using ProjektBoat.Interfaces;
 using ProjektBoat.Models;
+using ProjektBoat.Services;
 
 namespace ProjektBoat.Pages.Bookings {
-    public class IndexModel : PageModel {
+    public class IndexModel : PageModel
+    {
         private IBookingRepository _repo;
-        public string FilterCriteria { get; set; }
+        private LogInRepository _logInRepo;
+
+        public Member Member { get; set; }
+        
         public List<Booking> Bookings { get; private set; }
-        public IndexModel(IBookingRepository repo) {
+        public IndexModel(IBookingRepository repo, LogInRepository logInRepo)
+        {
             _repo = repo;
+            _logInRepo = logInRepo;
         }
-        public void OnGet() {
-            Bookings = _repo.GetAllBookings();
-        }
-        public void OnPost() {
-            if (FilterCriteria != null) {
-                Bookings = _repo.FilterBookings(FilterCriteria);
-            } else {
-                Bookings = _repo.GetAllBookings();
+        public IActionResult OnGet()
+        {
+            if (_logInRepo.GetLoggedMember().Equals(null))
+            {
+                return RedirectToPage("Users/Login");
+            }
+            else
+            {
+                Member = _logInRepo.GetLoggedMember();
+                Bookings = _repo.GetAllBookingsByMember(Member);
+                return Page();
             }
         }
     }
