@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton < IEventRepository, EventRepository>();
 builder.Services.AddTransient<IBoatRepository, JsonBoatRepository>();
 builder.Services.AddSingleton < IEventRepository, JsonEventRepository>();
 builder.Services.AddTransient<IBookingRepository, JsonBookingRepository>();
