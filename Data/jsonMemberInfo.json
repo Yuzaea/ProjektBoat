@@ -38,15 +38,5 @@
     "Certificate": "NaN",
     "Admin": false,
     "Password": "12345678"
-  },
-  {
-    "ID": 5,
-    "Name": "Charlie",
-    "Age": 21,
-    "PhoneNo": "12345678",
-    "Mail": "charlie@gmail.com",
-    "Certificate": "NaN",
-    "Admin": false,
-    "Password": "12345678"
   }
 ]

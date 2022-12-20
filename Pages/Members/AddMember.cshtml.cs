@@ -25,7 +25,7 @@ namespace ProjektBoat.Pages.Members
         public IActionResult OnPost()
         {
             _repo.AddMember(Member);
-            return RedirectToPage("Index");
+            return RedirectToPage("/Index");
         }
     }
 }
