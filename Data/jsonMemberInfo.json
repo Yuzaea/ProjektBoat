@@ -31,12 +31,12 @@
   },
   {
     "ID": 4,
-    "Name": "Nadia Edie Jensen",
-    "Age": 33,
-    "PhoneNo": "10 10 10 11",
-    "Mail": "nej@mail.com",
-    "Certificate": "Duelighedscertifikat",
+    "Name": "Bob",
+    "Age": 34,
+    "PhoneNo": "12345678",
+    "Mail": "bob@gmail.com",
+    "Certificate": "NaN",
     "Admin": false,
-    "Password": "nonono"
+    "Password": "12345678"
   }
 ]

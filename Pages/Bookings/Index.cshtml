@@ -3,6 +3,7 @@
 @using ProjektBoat.Models
 @using ProjektBoat.Interfaces
 @inject IBookingRepository repo
+@inject IBoatRepository boatRepo
 @{
     ViewData["Title"] = "Bookings";
 }
@@ -26,7 +27,7 @@
             <tr>
                 <td>@item.Name</td>
                 <td>@item.Description</td>
-                <td>@item.BoatName</td>
+                <td>@boatRepo.GetBoat(item.BoatId).BoatName</td>
                 <td>@item.DateTime</td>
                 <td>@item.TimeFrame</td>
                 <td>

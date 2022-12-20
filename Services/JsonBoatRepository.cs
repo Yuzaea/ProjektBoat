@@ -34,11 +34,11 @@ namespace ProjektBoat.Services
             return JsonFileReader.ReadJsonBoats(jsonFileName);
         }
 
-        public Boat GetBoat(string boatName)
+        public Boat GetBoat(int id)
         {
             foreach (Boat b in GetAllBoats())
             {
-                if (b.BoatName == boatName)
+                if (b.BoatId == id)
                     return b;
             }
             return new Boat();

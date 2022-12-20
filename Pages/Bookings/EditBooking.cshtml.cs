@@ -13,13 +13,13 @@ namespace ProjektBoat.Pages.Bookings {
 
         [BindProperty]
         public Booking Booking { get; set; }
-        public SelectList BoatName { get; set; }
+        public SelectList BoatId { get; set; }
         public EditBookingModel(IBookingRepository bookingRepo, IBoatRepository boatRepo)
         {
             _repo = bookingRepo;
             _boatRepo = boatRepo;
             List<Boat> Boats = _boatRepo.GetAllBoats();
-            BoatName = new SelectList(Boats, "BoatId", "BoatName");
+            BoatId = new SelectList(Boats, "BoatId", "BoatName");
         }
         public IActionResult OnGet(int bookingId)
         {
