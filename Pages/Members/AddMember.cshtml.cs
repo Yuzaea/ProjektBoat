@@ -19,12 +19,13 @@ namespace ProjektBoat.Pages.Members
         }
         public void OnGet()
         {
-           
-        }
 
-        public void OnPost()
+        }
+       
+        public IActionResult OnPost()
         {
             _repo.AddMember(Member);
+            return RedirectToPage("Index");
         }
     }
 }
