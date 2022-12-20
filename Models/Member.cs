@@ -26,7 +26,7 @@ namespace ProjektBoat.Models
         [Range(typeof(int), "1", "1000", ErrorMessage = "ID er uden for intervallet")]  
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Der mangler at udfyldes navn og efternavn")] 
+        [Required(ErrorMessage = "Der mangler at udfyldes navn og efternavn"), MinLength(1)] 
         public string Name { get; set; }
 
         [Required]
@@ -36,16 +36,16 @@ namespace ProjektBoat.Models
         [Required(ErrorMessage = "Telefonnummer mangler at blive udfyldt"), MaxLength(8)] 
         public string PhoneNo { get; set; }
 
-        [Required(ErrorMessage = "Der mangler at udfyldes email")] 
+        [Required(ErrorMessage = "Der mangler at udfyldes email"), MinLength(1)] 
         public string Mail { get; set; }
 
-        [Required(ErrorMessage = "Der mangles at udfylde hvilket certifikat(er) du har")] 
+        [Required(ErrorMessage = "Der mangles at udfylde hvilket certifikat(er) du har"), MinLength(1)] 
         public string Certificate { get; set; }
         
         [Required(ErrorMessage = "Der mangler at angive om du har admin tilladelse")] 
         public bool Admin { get; set; }
 
-        [Required(ErrorMessage = "Der mangler at angive et password")]
+        [Required(ErrorMessage = "Der mangler at angive et password"), MinLength(4)]
         public string Password { get; set; }
     }
 }
