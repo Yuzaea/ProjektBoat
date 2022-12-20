@@ -8,27 +8,22 @@ namespace ProjektBoat.Pages.EventPages
 {
     public class IndexModel : PageModel
     {
-        private IEventRepository repo;
+        private IEventRepository eventi;
 
 
-        private List<Event> Eventi { get; }
+        public List<Event> Event { get; private set; }
 
-        public List<Event> Events { get; set; }
         public IndexModel(IEventRepository eventRepository)
         {
-            repo = eventRepository;
+            eventi = eventRepository;
         }
         public void OnGet()
         {
-            Events = repo.GetAllEvents();
-        }
-
-        public List<Event> participents { get; set; }
-        public void OnPostAddParticipent()
-        {
-            
+            Event = eventi.GetAllEvents();
         }
 
     }
 }
+
+
 

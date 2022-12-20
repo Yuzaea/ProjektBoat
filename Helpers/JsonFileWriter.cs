@@ -36,5 +36,14 @@ namespace ProjektBoat.Helpers
                 JsonSerializer.Serialize<Member[]>(writer, members.ToArray());
             }
         }
+        public static void WritetoJsonEvents(List<Event> events, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writer = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                { SkipValidation = false, Indented = true, });
+                JsonSerializer.Serialize<Event[]>(writer, events.ToArray());
+            }
+        }
     }
 }

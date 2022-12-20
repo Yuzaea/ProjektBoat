@@ -1,4 +1,15 @@
 ﻿@page
 @model ProjektBoat.Pages.EventPages.ShowEventModel
+@inject IEventRepository evnete;
+@using ProjektBoat.Interfaces;
+@using ProjektBoat.Models;
+
 @{
+    ViewData["Title"] = "Event";
 }
+
+<h1>@Model.Event.EventID. @Model.Event.Name</h1>
+<p>
+    <h2>@Model.Event.Date</h2>
+    <h3>@Model.Event.Description</h3>
+<p />

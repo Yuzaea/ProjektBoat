@@ -1,0 +1,20 @@
+[
+  {
+    "EventID": 1,
+    "Name": "Coronas",
+    "ImageURL": null,
+    "participent": 5,
+    "Date": "2022-12-29T08:55:00",
+    "Description": "Corona sutter fanktisk rimeligt meget ):",
+    "MaxParticipents": null
+  },
+  {
+    "EventID": 12,
+    "Name": "sad face",
+    "ImageURL": "https://www.friendships.dk/wp-content/uploads/FriendShips_Copenhagen_electric_boat_rental_main.jpg",
+    "participent": null,
+    "Date": "2022-11-30T07:11:00",
+    "Description": "xd xd xd xd",
+    "MaxParticipents": null
+  }
+]

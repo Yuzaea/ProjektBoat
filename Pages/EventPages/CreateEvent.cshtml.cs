@@ -7,14 +7,14 @@ namespace ProjektBoat.Pages.EventPages
 {
     public class CreateEventModel : PageModel
     {
-        private IEventRepository repo;
+        private IEventRepository eventi;
 
         [BindProperty]
         public Event Event { get; set; }
 
         public CreateEventModel(IEventRepository eventRepository)
         {
-            repo = eventRepository;
+            eventi = eventRepository;
         }
         public IActionResult OnGet()
         {
@@ -27,7 +27,7 @@ namespace ProjektBoat.Pages.EventPages
             {
                 return Page();
             }
-            repo.AddEvent(Event);
+            eventi.AddEvent(Event);
             return RedirectToPage("Index");
         }
     }

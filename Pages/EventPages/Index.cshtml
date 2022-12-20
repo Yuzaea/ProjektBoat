@@ -1,6 +1,8 @@
 ﻿@page
-@using ProjektBoat.Models;
 @model ProjektBoat.Pages.EventPages.IndexModel
+@using ProjektBoat.Interfaces;
+@using ProjektBoat.Models;
+@inject IEventRepository eventRepository;
 @{
     ViewData["Title"] = "Show events";
 }
@@ -8,13 +10,13 @@
 
 
 <h1>
-    List of Boats </>
+    List of Events </>
 
     <a asp-page="CreateEvent"> Create new Event</a>
 
 
 
-    @foreach (Event item in Model.Events)
+    @foreach (Event item in Model.Event)
     {
             <div class="card" style="width: 18rem;">
 
@@ -24,26 +26,18 @@
         <p class="card-text">@item.Description</p>
                 <h7>@if (DateTime.UtcNow > item.Date)
                     {
-                        <p>    <font size="5">smol</font>      </p>
+                        <p>    <font size="3">Event overstået</font>      </p>
                     }
                     else
                     {
                            <p>  <font size="5">@item.Date  </font>    </p>
                     }
                 </h7>
-                <form method="post" asp-page-handler="AddParticipent">
+                <td><a asp-page="ShowEvent" asp-route-id=@item.EventID>Show</a>
+                <a asp-page="EditEvent" asp-route-id=@item.EventID>Edit</a>
+                <a asp-page="DeleteEvent" asp-route-id=@item.EventID>Delete</a>
 
-                    <a>
-                        @if (item.MaxParticipents != 0)
-                         
-                         {
-                        <b class="btn btn-primary" onclick="AddParticipent">@item.participent/@item.MaxParticipents</b>
-                         }
-                   </a>
-
-                </form>
            </div>
-
     </div>
     }
 </h1>

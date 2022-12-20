@@ -7,14 +7,14 @@ namespace ProjektBoat.Interfaces
 {
     public interface IEventRepository
     {
-    public int Count { get; }
     List<Event> GetAllEvents();
-    Event SearchEvent(int EventID);
+    Event GetEvent(int id);
     void AddEvent(Event ev);
+    void DeleteEvent(int id);
 
     void UpdateEvent(Event ev);
 
-        void AddParticipent(int EventID);
+    void AddParticipent(int EventID);
 
     }
 

@@ -27,5 +27,13 @@ namespace ProjektBoat.Helpers
                 return JsonSerializer.Deserialize<List<Member>>(indata);
             }
         }
+        public static List<Event> ReadJsonEvent(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string data = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Event>>(data);
+            }
+        }
     }
 }

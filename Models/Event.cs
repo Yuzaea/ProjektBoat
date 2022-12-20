@@ -7,6 +7,7 @@ namespace ProjektBoat.Models
 {
     public class Event
     {
+
         [Required]
         [Range(typeof(int), "1", "1000", ErrorMessage = "Id er uden for intervallet")]
         public int EventID { get; set; }
@@ -15,7 +16,6 @@ namespace ProjektBoat.Models
         [Required(ErrorMessage = "Name is required"), MaxLength(30)]
         public string Name { get; set; }
 
-        [JsonIgnore]
         public string? ImageURL { get; set; }
 
 
@@ -29,7 +29,6 @@ namespace ProjektBoat.Models
         [Required(ErrorMessage = "Desciption is required"), MinLength(1)]
         public string Description { get; set; }
 
-        [JsonIgnore]
         public int? MaxParticipents { get; set; }
 
         public Event(int eventID, string name, DateTime date, string imageURL, string description, int maxParticipents)

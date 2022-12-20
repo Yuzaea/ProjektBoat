@@ -1,4 +1,19 @@
 ﻿@page
 @model ProjektBoat.Pages.EventPages.DeleteEventModel
 @{
+    ViewData["Titel"] = "Delete Event";
 }
+
+<h1>Delete event</h1>
+
+<p>
+    <h2>Slet event?</h2>
+    <h3>EventID @Model.Event.EventID</h3>
+    <h3>Name @Model.Event.Name</h3>
+    <form method="post">
+        <input asp-for="@Model.Event.EventID" type="hidden" />
+        <input type="submit" value="Delete" />
+        <a asp-page="Index">Cancel</a>
+    </form>
+</p>
+
