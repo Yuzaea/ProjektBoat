@@ -38,5 +38,15 @@
     "Certificate": "NaN",
     "Admin": false,
     "Password": "12345678"
+  },
+  {
+    "ID": 5,
+    "Name": "Nadia Edie Jensen",
+    "Age": 26,
+    "PhoneNo": "10 10 10 11",
+    "Mail": "nej@mail.com",
+    "Certificate": "NaN",
+    "Admin": false,
+    "Password": "nonono"
   }
 ]
