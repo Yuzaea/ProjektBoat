@@ -1,26 +1,74 @@
 [
   {
     "BookingId": 1,
+    "UserId": 1,
     "Name": "Lorem Ipsum",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Price": 99.9,
+    "Description": "This is the first booking this user have made 1. booking",
+    "BoatName": "1",
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
   },
   {
     "BookingId": 2,
+    "UserId": 2,
     "Name": "Lorem Ipsum",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Price": 99.99,
+    "Description": "This is the first booking this user have made 1. booking",
+    "BoatName": "2",
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
   },
   {
     "BookingId": 3,
+    "UserId": 3,
     "Name": "Lorem Ipsum",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Price": 99.999,
+    "Description": "This is the first booking this user have made 1. booking",
+    "BoatName": "3",
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
+  },
+  {
+    "BookingId": 4,
+    "UserId": 4,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "BoatName": "1",
+    "DateTime": "2022-12-21T09:09:00",
+    "TimeFrame": "2022-12-28T09:09:00"
+  },
+  {
+    "BookingId": 5,
+    "UserId": 0,
+    "Name": "Lorem Ipsum",
+    "Description": "This is the 2. booking",
+    "BoatName": "3",
+    "DateTime": "2022-12-21T09:09:00",
+    "TimeFrame": "2022-12-28T09:09:00"
+  },
+  {
+    "BookingId": 6,
+    "UserId": 2,
+    "Name": "Lorem Ipsum",
+    "Description": "This is the 3. booking (Edited)",
+    "BoatName": "1",
+    "DateTime": "2022-12-22T09:09:00",
+    "TimeFrame": "2022-12-28T08:08:00"
+  },
+  {
+    "BookingId": 7,
+    "UserId": 2,
+    "Name": "Lorem Ipsum",
+    "Description": "This is the 4. booking",
+    "BoatName": "3",
+    "DateTime": "2022-12-14T09:09:00",
+    "TimeFrame": "2022-12-27T05:05:00"
+  },
+  {
+    "BookingId": 8,
+    "UserId": 1,
+    "Name": "Lorem Ipsum",
+    "Description": "Boat test",
+    "BoatName": "1",
+    "DateTime": "2022-12-28T09:09:00",
+    "TimeFrame": "2022-12-29T09:09:00"
   }
 ]

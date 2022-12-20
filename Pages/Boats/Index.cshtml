@@ -1,0 +1,37 @@
+﻿
+@page
+@model ProjektBoat.Pages.Boats.IndexModel
+@using ProjektBoat.Models
+@using ProjektBoat.Interfaces
+@inject IBoatRepository repo;
+@{
+    ViewData["Title"] = "Boat List";
+}
+
+<h1>List of Boats</h1>
+
+<form method="post">
+</form>
+<p>
+    <a asp-page="CreateBoat">Create New Boat</a>
+    <p>Number of boats @repo.GetAllBoats().Count</p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Pier</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Boats)
+        {
+            <tr>
+                <td>@item.BoatId</td>
+                <td>@item.BoatName</td>
+                <td>@item.Pier</td>
+            </tr>
+        }
+    </tbody>
+</table>

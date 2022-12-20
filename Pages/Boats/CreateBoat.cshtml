@@ -1,0 +1,29 @@
+﻿@page
+@model ProjektBoat.Pages.Boats.CreateBoatModel
+@{
+    ViewData["Title"] = "Create Boat";
+}
+<h1>Create Event</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.BoatName" class="control-label"></label>
+                <input asp-for="@Model.Boat.BoatName" class="form-control" />
+                <span asp-validation-for="@Model.Boat.BoatName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Pier" class="control-label"></label>
+                <input asp-for="@Model.Boat.Pier" class="form-control" />
+                <span asp-validation-for="@Model.Boat.Pier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">Cancel</a>
+</div>

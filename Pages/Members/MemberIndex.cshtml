@@ -1,4 +1,55 @@
 ﻿@page
 @model ProjektBoat.Pages.Members.MemberIndexModel
+@using ProjektBoat.Interfaces;
+@inject IMemberRepository repository;
 @{
+    ViewData["Title"] = "Medlemmer index ";
 }
+<h1>List of all members</h1>
+<p>
+    <a asp-page="CreateMember">Create a new member</a>
+</p>
+<div>
+    <ul>
+        <li>There are @repository.GetAllMembers().Count members</li>
+    </ul>
+</div>
+@*<form method="post">*@
+<form>
+    @*Default er get*@
+    <p>
+        search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>PhoneNo</th>
+            <th>Mail</th>
+            <th>Certificate</th>
+            <th>Admin</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Members)
+        @*@foreach(var item in repository.GetAllMembers())*@
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.PhoneNo</td>
+                <td>@item.Mail</td>
+                <td>@item.Certificate</td>
+                <td>@item.Admin</td>
+                <td><a asp-page="EditMember" asp-route-id="@item.ID">Edit</a></td>
+                <td><a asp-page="EditMember" asp-page-handler="Member" asp-route-evname="@item.Name">Edit</a></td>
+                <td><a asp-page="DeleteMember" asp-route-id="@item.ID">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

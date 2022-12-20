@@ -1,14 +1,18 @@
 [
   {
+    "BlogImage": "Sejl_2015.jpg",
     "Title": "L\u00F8rdags tur til  sverige",
     "PostId": 1,
-    "Description": "Fint vejr vi havde",
+    "ShortDescription": "Fint vejr vi havde",
+    "Description": "Dejlig tur til sverige. Vi s\u00E5 b\u00E5de fugle og fisk p\u00E5 vejen. S\u00E5 fik vi ogs\u00E5 lige hilst p\u00E5 nogle af de lokale :)",
     "DateTime": "2023-01-14T12:00:00"
   },
   {
+    "BlogImage": "St\u00E6vne.jpg",
     "Title": "Weekend-trip",
     "PostId": 2,
-    "Description": "\u002B overnatning",
+    "ShortDescription": "\u002B overnatning",
+    "Description": "Overnatning i naturen. R\u00F8r\u00E6g til morgenmad. Herlig tur vi havde",
     "DateTime": "2022-12-17T12:04:00"
   }
 ]

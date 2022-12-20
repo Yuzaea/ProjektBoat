@@ -6,7 +6,7 @@
 <div class="container p-3 my-3 border" style="width:25%">
     <h3 class="text-center">Login</h3>
     <p class="text-danger">@Model.AccessDenied</p>
-    @*<form method="post">
+    <form method="post">
         <div class="form-group">
             <label asp-for="@Model.Member.Mail" class="control-label"></label>
             <input asp-for="@Model.Member.Mail" class="form-control" />
@@ -17,12 +17,13 @@
             <input asp-for="@Model.Member.Password" class="form-control" />
             <span asp-validation-for="@Model.Member.Password" class="text-danger"></span>
         </div>
+        <p></p>
         <div class="form-check-group">
             <input type="submit" value="Login with Email" class="btn-block btn btn-primary" />
         </div>
         <br />
-    </form>*@
+    </form>
     <p>
-        <a asp-page="/Members/CreateMember" class="btn-block btn btn-primary">Registre</a>
+        <a asp-page="/Users/CreateUser" class="btn-block btn btn-primary">Register</a>
     </p>
 </div>

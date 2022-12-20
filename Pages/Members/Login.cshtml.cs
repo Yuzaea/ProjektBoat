@@ -25,15 +25,15 @@ namespace ProjektBoat.Pages.Members {
         }
         public IActionResult OnPost()
         {
-            //foreach (var member in memberRepo.GetAllMembers())
-            //{
-            //    if (member.Email == Member.Email || member.Password == Member.Password)
-            //    {
-            //        logInRepo.MemberLogIn(member);
-            //        return RedirectToPage("/Index");
-            //    }
-            //    AccessDenied = "Email or Password are wrong";
-            //}
+            foreach (var member in memberRepo.GetAllMembers())
+            {
+                if (member.Mail == Member.Mail && member.Password == Member.Password)
+                {
+                    logInRepo.MemberLogIn(member);
+                    return RedirectToPage("/Index");
+                }
+                AccessDenied = "Email or Password are wrong";
+            }
             return Page();
         }
     }
