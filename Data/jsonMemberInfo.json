@@ -27,6 +27,16 @@
     "Mail": "mc@mail.com",
     "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, Vandscooterbevis",
     "Admin": false,
-    "Password": "password" 
+    "Password": "password"
+  },
+  {
+    "ID": 4,
+    "Name": "Bob",
+    "Age": 34,
+    "PhoneNo": "12345678",
+    "Mail": "bob@gmail.com",
+    "Certificate": "NaN",
+    "Admin": false,
+    "Password": "12345678"
   }
 ]

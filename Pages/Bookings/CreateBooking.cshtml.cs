@@ -16,7 +16,7 @@ namespace ProjektBoat.Pages.Bookings {
         private IMemberRepository _memberRepo;
 
 
-        public SelectList BoatName { get; set; }
+        public SelectList BoatId { get; set; }
 
         [BindProperty]
         public Booking Booking { get; set; }
@@ -26,7 +26,7 @@ namespace ProjektBoat.Pages.Bookings {
             _bookingRepo = bookingRepo;
             _loggedInMember = loggedInMember;
             List<Boat> boats = _boatRepo.GetAllBoats();
-            BoatName = new SelectList(boats, "BoatId", "BoatName");
+            BoatId = new SelectList(boats, "BoatId", "BoatName");
         }
 
         public IActionResult OnGet()
