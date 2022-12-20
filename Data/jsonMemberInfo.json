@@ -27,6 +27,15 @@
     "Mail": "mc@mail.com",
     "Certificate": "Duelighedscertifikat, Kanalbevis, Speedb\u00E5dsbevis, Vandscooterbevis",
     "Admin": false,
-    "Password": "password" 
+    "Password": "password"
+  },
+  {
+    "ID": 4,
+    "Name": "Nadia Edie Jensen",
+    "Age": 33,
+    "PhoneNo": "10101011",
+    "Mail": "nej@mail.com",
+    "Certificate": "Duelighedscertifikat",
+    "Admin": false,
+    "Password": "nonono"
   }
-]
